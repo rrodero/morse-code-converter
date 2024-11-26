@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "converter"
+version = "0.1.0"
+description = ""
+authors = ["rrodero <rrodero@live.com>"]
+readme = "README.md"
+packages = [{include = "converter", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
