@@ -10,9 +10,10 @@ converter = converter.Converter()
 
 
 @app.command()
-def convert(morse: Annotated[bool, typer.Option("--morse, -m,", help="Convert morse to plain text")] = False):
+def convert(morse: Annotated[bool, typer.Option("--morse", "-m", help="Convert morse to plain text")] = False):
     if morse:
-        pass
+        morse_code = typer.prompt("Type the morse code to be converted to clear text")
+        message = converter.decrypt_message(morse_code)
     else:
         text = typer.prompt("Type the message to be converted to morse code")
         message = converter.encrypt_message(text)
