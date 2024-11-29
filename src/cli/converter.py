@@ -13,7 +13,6 @@ class Converter:
 
     def encrypt_message(self, message: str) -> str:
         ciphers = [self.morse_alphabet[letter] + " " if letter != " " else " " for letter in message]
-        print(ciphers)
         return "".join(ciphers)
 
     def decrypt_message(self, morse_code: str) -> str:

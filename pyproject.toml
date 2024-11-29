@@ -1,15 +1,20 @@
 [tool.poetry]
-name = "converter"
+name = "morse_code"
 version = "0.1.0"
 description = ""
 authors = ["rrodero <rrodero@live.com>"]
 readme = "README.md"
-packages = [{include = "converter", from = "src"}]
+packages = [
+    {include = "src"},
+    {include = "cli", from = "src"},
+]
+
+[tool.poetry.scripts]
+morse-code = "cli.main:app"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 typer = "^0.13.1"
-
 
 [build-system]
 requires = ["poetry-core"]
