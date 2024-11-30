@@ -7,8 +7,53 @@ class Converter:
 
     def __init__(self):
         """Initializes the Converter with the Morse alphabet."""
-        with open("../../resources/morse.json") as morse_json:
-            self.morse_alphabet: Dict[str, str] = json.load(morse_json)
+        self.morse_alphabet = {
+            "0": "-----",
+            "1": ".----",
+            "2": "..---",
+            "3": "...--",
+            "4": "....-",
+            "5": ".....",
+            "6": "-....",
+            "7": "--...",
+            "8": "---..",
+            "9": "----.",
+            "a": ".-",
+            "b": "-...",
+            "c": "-.-.",
+            "d": "-..",
+            "e": ".",
+            "f": "..-.",
+            "g": "--.",
+            "h": "....",
+            "i": "..",
+            "j": ".---",
+            "k": "-.-",
+            "l": ".-..",
+            "m": "--",
+            "n": "-.",
+            "o": "---",
+            "p": ".--.",
+            "q": "--.-",
+            "r": ".-.",
+            "s": "...",
+            "t": "-",
+            "u": "..-",
+            "v": "...-",
+            "w": ".--",
+            "x": "-..-",
+            "y": "-.--",
+            "z": "--..",
+            ".": ".-.-.-",
+            ",": "--..--",
+            "?": "..--..",
+            "!": "-.-.--",
+            "-": "-....-",
+            "/": "-..-.",
+            "@": ".--.-.",
+            "(": "-.--.",
+            ")": "-.--.-"
+        }
 
     def encrypt_message(self, message: str) -> str:
         """Encrypts a given text message into Morse code.
